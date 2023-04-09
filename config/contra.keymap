@@ -45,10 +45,10 @@
 
         layer_3 {
             bindings = <
-&kp EXCL  &kp AT  &kp POUND  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPERSAND  &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS
-  &trans  &trans     &trans      &trans       &trans     &trans         &trans    &trans                &trans                 &trans          &trans    &trans
-  &trans  &trans     &trans      &trans       &trans     &trans         &trans    &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS          &trans    &trans
-  &trans  &trans     &trans   &kp MINUS     &kp PLUS     &trans         &trans    &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE    &trans
+&kp EXCL        &kp AT     &kp POUND    &kp DOLLAR   &kp PERCENT     &kp CARET  &kp AMPERSAND      &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS
+  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp NUMBER_7          &kp NUMBER_8           &kp NUMBER_9    &kp NUMBER_0    &trans
+  &trans        &trans        &trans        &trans        &trans        &trans         &trans        &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS          &trans    &trans
+  &trans        &trans        &trans     &kp MINUS      &kp PLUS        &trans         &trans        &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE    &trans
             >;
         };
     };
