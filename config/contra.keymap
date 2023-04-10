@@ -13,6 +13,17 @@
 #define BT_CTRL  2
 
 / {
+    behaviors {
+        shift_enter: shift_enter {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_ENTER";
+            #binding-cells = <0>;
+            bindings =
+                <&kp RIGHT_SHIFT>,
+                <&kp ENTER>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
