@@ -22,6 +22,15 @@
                 <&kp RIGHT_SHIFT>,
                 <&kp ENTER>;
         };
+        toggle_bt_layer: toggle_bt_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TOGGLE_BT_LAYER";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&none>,
+                <&tog 2>;
+        };
     };
 
     keymap {
@@ -29,10 +38,10 @@
 
         default_layer {
             bindings = <
-  &kp ESC     &kp Q     &kp W   &kp E         &kp R      &kp T   &kp Y      &kp U             &kp I              &kp O          &kp P      &kp BSPC
-  &kp TAB     &kp A     &kp S   &kp D         &kp F      &kp G   &kp H      &kp J             &kp K              &kp L       &kp SEMI       &kp SQT
-&kp LCTRL     &kp Z     &kp X   &kp C         &kp V      &kp B   &kp N      &kp M         &kp COMMA            &kp DOT       &kp FSLH  &shift_enter
-    &mo 1  &kp LALT  &kp LGUI  &trans  &kp KP_EQUAL  &kp SPACE  &trans  &kp ENTER  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH         &mo 3
+  &kp ESC     &kp Q     &kp W   &kp E         &kp R      &kp T      &kp Y      &kp U             &kp I              &kp O          &kp P      &kp BSPC
+  &kp TAB     &kp A     &kp S   &kp D         &kp F      &kp G      &kp H      &kp J             &kp K              &kp L       &kp SEMI       &kp SQT
+&kp LCTRL     &kp Z     &kp X   &kp C         &kp V      &kp B      &kp N      &kp M         &kp COMMA            &kp DOT       &kp FSLH  &shift_enter
+    &mo 1  &kp LALT  &kp LGUI  &trans  &kp KP_EQUAL  &kp SPACE  &kp SPACE  &kp ENTER  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH         &mo 3
             >;
         };
 
@@ -50,7 +59,7 @@
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans      &trans      &trans  &bt BT_CLR  &trans
 &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans      &trans      &trans      &trans  &trans
 &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans      &trans      &trans      &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &bt BT_PRV  &bt BT_NXT      &trans  &trans
+&trans        &trans        &trans        &tog 0        &trans        &trans  &trans  &trans  &bt BT_PRV  &bt BT_NXT      &trans  &trans
             >;
         };
 
