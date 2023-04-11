@@ -102,11 +102,6 @@
         };
     };
     
-
-
-};
-
-/ {
     combos {
         compatible = "zmk,combos";
 
@@ -134,9 +129,7 @@
             bindings = <&to 2>;
         };
     };
-};
 
-/ {
     macros {
         tmux_prev: tmux_prev {
             compatible = "zmk,behavior-macro";
@@ -151,65 +144,63 @@
             bindings = <&kp LC(B) &kp N>;
         };
     };
-};
 
+    keymap {
+        compatible = "zmk,keymap";
 
-keymap {
-    compatible = "zmk,keymap";
+        default_layer {
+            bindings = <
+            &gresc     &kp Q     &kp W  &kp E      &kp R          &kp T          &kp Y              &kp U             &kp I              &kp O            &kp P              &kp BSPC
+         &lt 1 TAB     &kp A     &kp S  &kp D      &kp F  &morph_g_home  &morph_h_left      &morph_j_down       &morph_k_up     &morph_l_right  &morph_semi_end              &kp APOS
+    &kp LEFT_SHIFT     &kp Z     &kp X  &kp C      &kp V          &kp B          &kp N              &kp M         &kp COMMA            &kp DOT         &kp FSLH  &morph_rshift_number
+         &kp LCTRL  &kp LALT  &kp LGUI  &to 0  &kp EQUAL      &kp SPACE      &kp SPACE  &kp RIGHT_CONTROL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp BACKSLASH           &lt 3 ENTER
+            >;
+        };
 
-    default_layer {
-        bindings = <
-        &gresc     &kp Q     &kp W  &kp E      &kp R          &kp T          &kp Y              &kp U             &kp I              &kp O            &kp P              &kp BSPC
-     &lt 1 TAB     &kp A     &kp S  &kp D      &kp F  &morph_g_home  &morph_h_left      &morph_j_down       &morph_k_up     &morph_l_right  &morph_semi_end              &kp APOS
-&kp LEFT_SHIFT     &kp Z     &kp X  &kp C      &kp V          &kp B          &kp N              &kp M         &kp COMMA            &kp DOT         &kp FSLH  &morph_rshift_number
-     &kp LCTRL  &kp LALT  &kp LGUI  &to 0  &kp EQUAL      &kp SPACE      &kp SPACE  &kp RIGHT_CONTROL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp BACKSLASH           &lt 3 ENTER
-        >;
+        num_mods {
+            bindings = <
+         &trans      &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0        &kp DEL
+         &trans           &kp F11       &kp F12         &trans        &trans          &trans        &trans        &trans        &trans     &kp LC(L)        &trans       &kp BSLH
+    &kp PAGE_UP            &kp F1        &kp F2         &kp F3        &kp F4          &kp F5        &kp F6        &kp F7        &kp F8        &kp F9       &kp F10  &kp PAGE_DOWN
+         &trans  &kp LG(NUMBER_1)     &kp LS(I)  &kp LG(MINUS)  &kp LG(PLUS)  &kp LEFT_SHIFT        &trans        &trans    &tmux_prev    &tmux_next        &trans    &bootloader
+            >;
+        };
+
+        bt_control {
+            bindings = <
+    &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none       &none       &none  &none  &bt BT_CLR
+    &none         &none         &none         &none         &none         &none  &none  &none       &none       &none  &none       &none
+    &none         &none         &none         &none         &none         &none  &none  &none       &none       &none  &none       &none
+    &none         &none         &none         &to 0         &none         &none  &none  &none  &bt BT_PRV  &bt BT_NXT  &none       &none
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp NUMBER_7          &kp NUMBER_8           &kp NUMBER_9           &kp NUMBER_0  &trans
+    &trans      &kp EXCL   &kp AT_SIGN     &kp POUND    &kp DOLLAR   &kp PERCENT     &kp CARET  &kp AMPERSAND              &kp STAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+    &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS         &kp UNDERSCORE  &trans
+    &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE               &kp PIPE  &trans
+            >;
+        };
+
+        macro_1 {
+            bindings = <
+    &trans  &trans  &trans  &trans  &trans  &trans  &trans     &kp KP_MINUS  &kp KP_PLUS      &kp KP_PLUS  &kp KP_ENTER     &kp KP_ENTER
+    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_MULTIPLY    &kp KP_N9        &kp KP_N6     &kp KP_N3       &kp KP_DOT
+    &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp KP_DIVIDE    &kp KP_N8  &kp KP_NUMBER_5     &kp KP_N2  &kp KP_NUMBER_0
+    &trans  &trans  &trans   &to 0  &trans  &trans  &trans           &tog 5    &kp KP_N7  &kp KP_NUMBER_4     &kp KP_N1  &kp KP_NUMBER_0
+            >;
+        };
+
+        macro_2 {
+            bindings = <
+    &none  &none  &none  &none  &none  &none  &none   &none        &none      &none          &none    &none
+    &none  &none  &none  &none  &none  &none  &none   &none  &kp PAGE_UP  &kp RIGHT  &kp PAGE_DOWN  &kp DEL
+    &none  &none  &none  &none  &none  &none  &none   &none       &kp UP   &kp DOWN          &none  &kp INS
+    &none  &none  &none  &to 0  &none  &none  &none  &trans     &kp HOME   &kp LEFT        &kp END  &kp INS
+            >;
+        };
     };
-
-    num_mods {
-        bindings = <
-     &trans      &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0        &kp DEL
-     &trans           &kp F11       &kp F12         &trans        &trans          &trans        &trans        &trans        &trans     &kp LC(L)        &trans       &kp BSLH
-&kp PAGE_UP            &kp F1        &kp F2         &kp F3        &kp F4          &kp F5        &kp F6        &kp F7        &kp F8        &kp F9       &kp F10  &kp PAGE_DOWN
-     &trans  &kp LG(NUMBER_1)     &kp LS(I)  &kp LG(MINUS)  &kp LG(PLUS)  &kp LEFT_SHIFT        &trans        &trans    &tmux_prev    &tmux_next        &trans    &bootloader
-        >;
-    };
-
-    bt_control {
-        bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none       &none       &none  &none  &bt BT_CLR
-&none         &none         &none         &none         &none         &none  &none  &none       &none       &none  &none       &none
-&none         &none         &none         &none         &none         &none  &none  &none       &none       &none  &none       &none
-&none         &none         &none         &to 0         &none         &none  &none  &none  &bt BT_PRV  &bt BT_NXT  &none       &none
-        >;
-    };
-
-    layer_3 {
-        bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp NUMBER_7          &kp NUMBER_8           &kp NUMBER_9           &kp NUMBER_0  &trans
-&trans      &kp EXCL   &kp AT_SIGN     &kp POUND    &kp DOLLAR   &kp PERCENT     &kp CARET  &kp AMPERSAND              &kp STAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS         &kp UNDERSCORE  &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE               &kp PIPE  &trans
-        >;
-    };
-
-    macro_1 {
-        bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &kp KP_MINUS  &kp KP_PLUS      &kp KP_PLUS  &kp KP_ENTER     &kp KP_ENTER
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_MULTIPLY    &kp KP_N9        &kp KP_N6     &kp KP_N3       &kp KP_DOT
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp KP_DIVIDE    &kp KP_N8  &kp KP_NUMBER_5     &kp KP_N2  &kp KP_NUMBER_0
-&trans  &trans  &trans   &to 0  &trans  &trans  &trans           &tog 5    &kp KP_N7  &kp KP_NUMBER_4     &kp KP_N1  &kp KP_NUMBER_0
-        >;
-    };
-
-    macro_2 {
-        bindings = <
-&none  &none  &none  &none  &none  &none  &none   &none        &none      &none          &none    &none
-&none  &none  &none  &none  &none  &none  &none   &none  &kp PAGE_UP  &kp RIGHT  &kp PAGE_DOWN  &kp DEL
-&none  &none  &none  &none  &none  &none  &none   &none       &kp UP   &kp DOWN          &none  &kp INS
-&none  &none  &none  &to 0  &none  &none  &none  &trans     &kp HOME   &kp LEFT        &kp END  &kp INS
-        >;
-    };
-};
 
 };
