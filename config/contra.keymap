@@ -49,7 +49,7 @@
   &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0        &kp DEL
   &kp TILDE       &kp F11       &kp F12         &trans        &trans        &kp HOME      &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT       &kp END       &kp BSLH
 &kp PAGE_UP        &kp F1        &kp F2         &kp F3        &kp F4          &kp F5        &kp F6          &kp F7        &kp F8        &kp F9       &kp F10  &kp PAGE_DOWN
-     &trans        &trans        &trans  &kp LC(MINUS)  &kp LC(PLUS)  &kp LEFT_SHIFT        &trans          &trans        &trans        &trans        &trans    &bootloader
+     &trans        &trans     &kp LC(I)  &kp LC(MINUS)  &kp LC(PLUS)  &kp LEFT_SHIFT        &trans          &trans        &trans        &trans        &trans    &bootloader
             >;
         };
 
@@ -64,10 +64,10 @@
 
         layer_3 {
             bindings = <
-&kp EXCL        &kp AT     &kp POUND    &kp DOLLAR   &kp PERCENT     &kp CARET  &kp AMPERSAND      &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS
-  &kp N1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8          &kp NUMBER_9           &kp NUMBER_0          &trans    &trans
-  &trans        &trans        &trans        &trans        &trans        &trans         &trans        &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &trans
-  &trans        &trans        &trans     &kp MINUS      &kp PLUS        &trans         &trans        &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE    &trans
+&trans  &kp EXCLAMATION        &kp AT     &kp POUND    &kp DOLLAR   &kp PERCENT     &kp CARET  &kp AMPERSAND              &kp STAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp NUMBER_7          &kp NUMBER_8           &kp NUMBER_9           &kp NUMBER_0  &trans
+&trans           &trans        &trans        &trans        &trans        &trans        &trans         &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS         &kp UNDERSCORE  &trans
+&trans           &trans        &trans     &kp MINUS      &kp PLUS        &trans        &trans         &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE               &kp PIPE  &trans
             >;
         };
 
