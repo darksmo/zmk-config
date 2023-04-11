@@ -136,23 +136,23 @@
     };
 };
 
-/ macros {
-    tmux_prev: tmux_prev {
-        compatible = "zmk,behavior-macro";
-        label = "TMUX_PREV";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp P>;
-    };
-    tmux_next: tmux_next {
-        compatible = "zmk,behavior-macro";
-        label = "TMUX_NEXT";
-        #binding-cells = <0>;
-        bindings = <&kp LC(B) &kp N>;
+/ {
+    macros {
+        tmux_prev: tmux_prev {
+            compatible = "zmk,behavior-macro";
+            label = "TMUX_PREV";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp P>;
+        };
+        tmux_next: tmux_next {
+            compatible = "zmk,behavior-macro";
+            label = "TMUX_NEXT";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N>;
+        };
     };
 };
 
-macros {
-};
 
 keymap {
     compatible = "zmk,keymap";
