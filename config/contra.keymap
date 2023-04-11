@@ -30,6 +30,14 @@
                 <&to 4>,
                 <&to 2>;
         };
+        tap_apos_enter: tap_apos_enter {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_APOS_ENTER";
+            #binding-cells = <0>;
+            bindings =
+                <&kp APOSTROPHE>,
+                <&kp ENTER>;
+        };
     };
 
     keymap {
@@ -37,10 +45,10 @@
 
         default_layer {
             bindings = <
-  &kp ESC     &kp Q     &kp W       &kp E      &kp R      &kp T      &kp Y      &kp U             &kp I              &kp O          &kp P      &kp BSPC
-  &kp TAB     &kp A     &kp S       &kp D      &kp F      &kp G      &kp H      &kp J             &kp K              &kp L       &kp SEMI       &kp SQT
-&kp LCTRL     &kp Z     &kp X       &kp C      &kp V      &kp B      &kp N      &kp M         &kp COMMA            &kp DOT       &kp FSLH  &shift_enter
-    &mo 1  &kp LALT  &kp LGUI  &tap_layer  &kp EQUAL  &kp SPACE  &kp SPACE  &kp ENTER  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH         &mo 3
+  &kp ESC     &kp Q     &kp W       &kp E      &kp R      &kp T      &kp Y      &kp U             &kp I              &kp O          &kp P         &kp BSPC
+  &kp TAB     &kp A     &kp S       &kp D      &kp F      &kp G      &kp H      &kp J             &kp K              &kp L       &kp SEMI  &tap_apos_enter
+&kp LCTRL     &kp Z     &kp X       &kp C      &kp V      &kp B      &kp N      &kp M         &kp COMMA            &kp DOT       &kp FSLH     &shift_enter
+    &mo 1  &kp LALT  &kp LGUI  &tap_layer  &kp EQUAL  &kp SPACE  &kp SPACE  &kp ENTER  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH            &mo 3
             >;
         };
 
