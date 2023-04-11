@@ -106,31 +106,33 @@
 
 };
 
-/ combos {
-    compatible = "zmk,combos";
+/ {
+    combos {
+        compatible = "zmk,combos";
 
-    combo_minus {
-        timeout-ms = <50>;
-        key-positions = <40 41>;
-        bindings = <&kp MINUS>;
-    };
+        combo_minus {
+            timeout-ms = <50>;
+            key-positions = <40 41>;
+            bindings = <&kp MINUS>;
+        };
 
-    combo_plus {
-        timeout-ms = <50>;
-        key-positions = <41 43>;
-        bindings = <&kp PLUS>;
-    };
+        combo_plus {
+            timeout-ms = <50>;
+            key-positions = <41 43>;
+            bindings = <&kp PLUS>;
+        };
 
-    combo_layer_numpad {
-        timeout-ms = <50>;
-        key-positions = <39 30>;
-        bindings = <&to 4>;
-    };
+        combo_layer_numpad {
+            timeout-ms = <50>;
+            key-positions = <39 30>;
+            bindings = <&to 4>;
+        };
 
-    combo_layer_bluetooth {
-        timeout-ms = <50>;
-        key-positions = <39 29>;
-        bindings = <&to 2>;
+        combo_layer_bluetooth {
+            timeout-ms = <50>;
+            key-positions = <39 29>;
+            bindings = <&to 2>;
+        };
     };
 };
 
