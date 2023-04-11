@@ -117,6 +117,18 @@ combos {
         key-positions = <41 43>;
         bindings = <&kp PLUS>;
     };
+    
+    combo_layer_numpad {
+        timeout-ms = <50>;
+        key-positions = <41 43>;
+        bindings = <&to 4>;
+    };
+    
+    combo_layer_bluetooth {
+        timeout-ms = <50>;
+        key-positions = <41 43>;
+        bindings = <&to 2>;
+    };
 };
 
 macros {
