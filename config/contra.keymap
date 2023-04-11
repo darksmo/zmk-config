@@ -101,23 +101,21 @@
             mods = <(MOD_LCTL)>;
         };
     };
+};
 
-    {
+combos {
+    compatible = "zmk,combos";
 
-    combos {
-        compatible = "zmk,combos";
+    combo_minus {
+        timeout-ms = <50>;
+        key-positions = <40 41>;
+        bindings = <&kp MINUS>;
+    };
 
-        combo_minus {
-            timeout-ms = <50>;
-            key-positions = <40 41>;
-            bindings = <&kp MINUS>;
-        };
-
-        combo_plus {
-            timeout-ms = <50>;
-            key-positions = <41 43>;
-            bindings = <&kp PLUS>;
-        };
+    combo_plus {
+        timeout-ms = <50>;
+        key-positions = <41 43>;
+        bindings = <&kp PLUS>;
     };
 };
 
@@ -134,9 +132,6 @@ macros {
         #binding-cells = <0>;
         bindings = <&kp LC(B) &kp N>;
     };
-};
-
-macros {
 };
 
 keymap {
