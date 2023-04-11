@@ -120,6 +120,12 @@
             key-positions = <39 29>;
             bindings = <&to 2>;
         };
+        
+        combo_bootloader {
+            timeout-ms = <50>;
+            key-positions = <36 38 11>;
+            bindings = <&bootloader>;
+        };
     };
 
     macros {
