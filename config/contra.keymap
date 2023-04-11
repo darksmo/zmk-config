@@ -41,6 +41,22 @@
             mods = <(MOD_RCTL)>;
         };
     };
+    
+    {
+        combos {
+            compatible = "zmk,combos";
+            combo_minus {
+                timeout-ms = <50>;
+                key-positions = <40 41>;
+                bindings = <&kp MINUS>;
+            };
+            combo_plus {
+                timeout-ms = <50>;
+                key-positions = <41 43>;
+                bindings = <&kp PLUS>;
+            };
+        };
+    };
 
     macros {
         tmux_prev: tmux_prev {
