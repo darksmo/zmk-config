@@ -92,6 +92,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
+        morph_bksp_delete: morph_bksp_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_BKSP_DELETE";
+            bindings =
+                <&kp BACKSPACE>,
+                <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     combos {
@@ -120,7 +130,7 @@
             key-positions = <39 29>;
             bindings = <&to 2>;
         };
-        
+
         combo_bootloader {
             timeout-ms = <50>;
             key-positions = <36 38 11>;
@@ -148,10 +158,10 @@
 
         default_layer {
             bindings = <
-        &gresc     &kp Q     &kp W  &kp E      &kp R          &kp T          &kp Y          &kp U             &kp I              &kp O            &kp P         &kp BSPC
-     &lt 1 TAB     &kp A     &kp S  &kp D      &kp F  &morph_g_home  &morph_h_left  &morph_j_down       &morph_k_up     &morph_l_right  &morph_semi_end         &kp APOS
-&kp LEFT_SHIFT     &kp Z     &kp X  &kp C      &kp V          &kp B          &kp N          &kp M         &kp COMMA            &kp DOT         &kp FSLH  &kp RIGHT_SHIFT
-     &kp LCTRL  &kp LALT  &kp LGUI  &to 0  &kp EQUAL      &kp SPACE      &kp SPACE          &mo 3  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp BACKSLASH      &lt 3 ENTER
+        &gresc     &kp Q     &kp W  &kp E      &kp R          &kp T          &kp Y          &kp U             &kp I              &kp O            &kp P  &morph_bksp_delete
+     &lt 1 TAB     &kp A     &kp S  &kp D      &kp F  &morph_g_home  &morph_h_left  &morph_j_down       &morph_k_up     &morph_l_right  &morph_semi_end            &kp APOS
+&kp LEFT_SHIFT     &kp Z     &kp X  &kp C      &kp V          &kp B          &kp N          &kp M         &kp COMMA            &kp DOT         &kp FSLH     &kp RIGHT_SHIFT
+     &kp LCTRL  &kp LALT  &kp LGUI  &to 0  &kp EQUAL      &kp SPACE      &kp SPACE          &mo 3  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp BACKSLASH         &lt 3 ENTER
             >;
         };
 
