@@ -120,7 +120,7 @@
         combo_triple_eq {
             timeout-ms = <50>;
             key-positions = <40 41 43>;
-            bindings = <&kp EQUAL &kp EQUAL &kp EQUAL>;
+            bindings = <&macro_triple_equal>;
         };
 
         combo_layer_numpad {
