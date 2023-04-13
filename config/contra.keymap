@@ -136,7 +136,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_UNDERSCORE_SLASH";
             bindings =
-                <&kp SLASH>,
+                <&kp BACKSLASH>,
                 <&kp UNDERSCORE>;
 
             #binding-cells = <0>;
