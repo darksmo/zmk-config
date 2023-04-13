@@ -213,6 +213,12 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp EQUAL &kp EQUAL>;
         };
+        macro_screenshot: macro_screenshot {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO_SCREENSHOT";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LCMD) &kp NUMBER_4>;
+        };
     };
 
     keymap {
@@ -229,10 +235,10 @@
 
         num_mods {
             bindings = <
-&kp F1            &kp F2     &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9    &kp F10  &kp F11        &kp F12
-&trans            &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(L)   &trans      &kp PG_UP
-&trans            &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans   &trans  &kp PAGE_DOWN
-&trans  &kp LG(NUMBER_1)  &kp LS(I)  &trans  &trans  &trans  &trans  &trans  &trans     &trans   &trans     &kp INSERT
+&kp F1            &kp F2     &kp F3  &kp F4  &kp F5             &kp F6  &kp F7  &kp F8  &kp F9    &kp F10  &kp F11        &kp F12
+&trans            &trans     &trans  &trans  &trans             &trans  &trans  &trans  &trans  &kp LC(L)   &trans      &kp PG_UP
+&trans            &trans     &trans  &trans  &trans             &trans  &trans  &trans  &trans     &trans   &trans  &kp PAGE_DOWN
+&trans  &kp LG(NUMBER_1)  &kp LS(I)  &trans  &trans  &macro_screenshot  &trans  &trans  &trans     &trans   &trans     &kp INSERT
             >;
         };
 
