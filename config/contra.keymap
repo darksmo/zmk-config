@@ -217,7 +217,7 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_SCREENSHOT";
             #binding-cells = <0>;
-            bindings = <&kp LS(LCMD) &kp NUMBER_4>;
+            bindings = <&kp LG(LS(NUMBER_4))>;
         };
     };
 
