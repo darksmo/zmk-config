@@ -161,6 +161,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
         morph_space_underscore: morph_space_underscore {
             compatible = "zmk,behavior-mod-morph";
