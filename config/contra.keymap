@@ -194,10 +194,10 @@
             bindings = <&kp UNDERSCORE>;
         };
 
-        combo_enter {
+        combo_quot {
             timeout-ms = <50>;
             key-positions = <22 23>;
-            bindings = <&kp ENTER>;
+            bindings = <&kp DOUBLE_QUOTES>;
         };
 
         combo_triple_eq {
@@ -275,10 +275,10 @@
 
         default_layer {
             bindings = <
-&mmmorph_esc_excl     &kp Q     &kp W      &kp E                    &kp R          &kp T          &kp Y          &kp U                      &kp I                      &kp O                    &kp P  &morph_bksp_delete
-        &lt 1 TAB     &kp A     &kp S      &kp D                    &kp F  &morph_g_home  &morph_h_left  &morph_j_down                &morph_k_up             &morph_l_right          &morph_semi_end            &kp APOS
-   &kp LEFT_SHIFT     &kp Z     &kp X      &kp C                    &kp V          &kp B          &kp N          &kp M                  &kp COMMA                    &kp DOT                 &kp FSLH     &kp RIGHT_SHIFT
-        &kp LCTRL  &kp LALT  &kp LGUI  &kp EQUAL  &morph_space_underscore      &kp SPACE      &kp SPACE    &lt 4 ENTER  &morph_lbracket_tmux_prev  &morph_rbracket_tmux_next  &morph_underscore_slash  &morph_lctrl_enter
+&mmmorph_esc_excl     &kp Q     &kp W  &kp E                    &kp R          &kp T          &kp Y          &kp U                      &kp I                      &kp O                    &kp P  &morph_bksp_delete
+        &lt 1 TAB     &kp A     &kp S  &kp D                    &kp F  &morph_g_home  &morph_h_left  &morph_j_down                &morph_k_up             &morph_l_right          &morph_semi_end            &kp APOS
+   &kp LEFT_SHIFT     &kp Z     &kp X  &kp C                    &kp V          &kp B          &kp N          &kp M                  &kp COMMA                    &kp DOT                 &kp FSLH     &kp RIGHT_SHIFT
+        &kp LCTRL  &kp LALT  &kp LGUI  &to 7  &morph_space_underscore      &kp SPACE      &kp SPACE    &lt 4 ENTER  &morph_lbracket_tmux_prev  &morph_rbracket_tmux_next  &morph_underscore_slash  &morph_lctrl_enter
             >;
         };
 
@@ -333,6 +333,15 @@
 &none  &none  &none  &none  &none  &none  &none   &none  &kp PAGE_UP  &kp RIGHT  &kp PAGE_DOWN  &kp DEL
 &none  &none  &none  &none  &none  &none  &none   &none       &kp UP   &kp DOWN          &none  &kp INS
 &none  &none  &none  &to 0  &none  &none  &none  &trans     &kp HOME   &kp LEFT        &kp END  &kp INS
+            >;
+        };
+
+        fixed_num {
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6        &kp N7   &kp N8  &kp N9  &kp N0   &kp BSPC
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp NUMBER_4   &kp N5  &kp N6  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp N1   &kp N2  &kp N3  &trans  &kp RSHFT
+&trans  &trans  &trans  &trans   &to 0  &trans  &trans        &kp N0  &kp DOT  &trans  &trans     &trans
             >;
         };
     };
