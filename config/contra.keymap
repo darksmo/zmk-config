@@ -187,7 +187,7 @@
 
     combos {
         compatible = "zmk,combos";
-        
+
         combo_underscore {
             timeout-ms = <50>;
             key-positions = <46 47>;
@@ -284,10 +284,10 @@
 
         F_MODS {
             bindings = <
-&kp F1            &kp F2     &kp F3  &kp F4  &kp F5               &kp F6  &kp F7  &kp F8   &kp F9    &kp F10  &kp F11  &kp F12
-&trans         &kp PG_UP     &trans  &trans  &trans               &trans  &trans  &trans  &kp INS  &kp LC(L)   &trans   &trans
-&trans         &kp PG_DN     &trans  &trans  &trans  &macro_best_regards  &trans  &trans   &trans     &trans   &trans   &trans
-&trans  &kp LG(NUMBER_1)  &kp LS(I)  &trans  &trans    &macro_screenshot  &trans  &trans   &trans     &trans   &trans   &trans
+&kp F1            &kp F2     &kp F3     &kp F4     &kp F5               &kp F6  &kp F7  &kp F8   &kp F9    &kp F10     &kp F11     &kp F12
+&trans         &kp PG_UP     &trans  &kp LC(D)     &trans               &trans  &trans  &trans  &kp INS  &kp LC(L)  &tmux_prev  &tmux_next
+&trans         &kp PG_DN  &kp LC(X)  &kp LC(C)  &kp LC(V)  &macro_best_regards  &trans  &trans   &trans     &trans      &trans      &trans
+&trans  &kp LG(NUMBER_1)  &kp LS(I)     &trans     &trans    &macro_screenshot  &trans  &trans   &trans     &trans      &trans      &trans
             >;
         };
 
