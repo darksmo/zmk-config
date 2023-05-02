@@ -234,6 +234,11 @@
             bindings = <&kp UNDERSCORE>;
             key-positions = <35 34>;
         };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <12 13>;
+        };
     };
 
     macros {
@@ -275,18 +280,18 @@
         default_layer {
             bindings = <
 &mmmorph_esc_excl     &kp Q     &kp W  &kp E                    &kp R          &kp T          &kp Y          &kp U                      &kp I                      &kp O                    &kp P  &morph_bksp_delete
-        &lt 1 TAB     &kp A     &kp S  &kp D                    &kp F  &morph_g_home  &morph_h_left  &morph_j_down                &morph_k_up             &morph_l_right          &morph_semi_end            &kp APOS
+    &mt LCTRL TAB     &kp A     &kp S  &kp D                    &kp F  &morph_g_home  &morph_h_left  &morph_j_down                &morph_k_up             &morph_l_right          &morph_semi_end            &kp APOS
    &kp LEFT_SHIFT     &kp Z     &kp X  &kp C                    &kp V          &kp B          &kp N          &kp M                  &kp COMMA                    &kp DOT                 &kp FSLH     &kp RIGHT_SHIFT
-        &kp LCTRL  &kp LALT  &kp LGUI  &to 7  &morph_space_underscore      &kp SPACE      &kp SPACE    &lt 4 ENTER  &morph_lbracket_tmux_prev  &morph_rbracket_tmux_next  &morph_underscore_slash  &morph_lctrl_enter
+            &mo 1  &kp LALT  &kp LGUI  &to 7  &morph_space_underscore      &kp SPACE      &kp SPACE    &lt 4 ENTER  &morph_lbracket_tmux_prev  &morph_rbracket_tmux_next  &morph_underscore_slash  &morph_lctrl_enter
             >;
         };
 
         F_MODS {
             bindings = <
-&kp F1            &kp F2     &kp F3     &kp F4     &kp F5               &kp F6  &kp F7  &kp F8   &kp F9    &kp F10     &kp F11     &kp F12
-&trans         &kp PG_UP     &trans  &kp LC(D)     &trans               &trans  &trans  &trans  &kp INS  &kp LC(L)  &tmux_prev  &tmux_next
-&trans         &kp PG_DN  &kp LC(X)  &kp LC(C)  &kp LC(V)  &macro_best_regards  &trans  &trans   &trans     &trans      &trans      &trans
-&trans  &kp LG(NUMBER_1)  &kp LS(I)     &trans     &trans    &macro_screenshot  &trans  &trans   &trans     &trans      &trans      &trans
+&kp F1            &kp F2     &kp F3  &kp F4  &kp F5               &kp F6  &kp F7  &kp F8   &kp F9  &kp F10     &kp F11     &kp F12
+&trans         &kp PG_UP     &trans  &trans  &trans               &trans  &trans  &trans  &kp INS   &trans  &tmux_prev  &tmux_next
+&trans         &kp PG_DN     &trans  &trans  &trans  &macro_best_regards  &trans  &trans   &trans   &trans      &trans      &trans
+&trans  &kp LG(NUMBER_1)  &kp LS(I)  &trans  &trans    &macro_screenshot  &trans  &trans   &trans   &trans      &trans      &trans
             >;
         };
 
