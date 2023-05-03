@@ -194,10 +194,10 @@
             bindings = <&kp DOUBLE_QUOTES>;
         };
 
-        combo_triple_eq {
+        combo_best_regards {
             timeout-ms = <50>;
             key-positions = <40 41 43>;
-            bindings = <&macro_triple_equal>;
+            bindings = <&macro_best_regards>;
         };
 
         combo_layer_numpad {
@@ -299,6 +299,11 @@
             bindings = <&kp F12>;
             key-positions = <11 23>;
         };
+
+        combo_triple_equal {
+            bindings = <&macro_triple_equal>;
+            key-positions = <23 22 21>;
+        };
     };
 
     macros {
@@ -348,10 +353,10 @@
 
         F_MODS {
             bindings = <
-&kp TILDE            &trans  &kp LC(W)  &trans  &trans               &trans    &trans    &trans        &trans     &trans      &trans  &kp DELETE
-   &trans         &kp PG_UP     &trans  &trans  &trans               &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &tmux_prev  &tmux_next
-   &trans         &kp PG_DN     &trans  &trans  &trans  &macro_best_regards    &trans    &trans        &trans     &trans      &trans      &trans
-   &trans  &kp LG(NUMBER_1)  &kp LS(I)  &trans  &trans    &macro_screenshot    &trans    &trans        &trans     &trans      &trans      &trans
+&kp TILDE            &trans  &kp LC(W)  &trans  &trans             &trans    &trans    &trans        &trans     &trans      &trans  &kp DELETE
+   &trans         &kp PG_UP     &trans  &trans  &trans             &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &tmux_prev  &tmux_next
+   &trans         &kp PG_DN     &trans  &trans  &trans          &kp LC(B)    &trans    &trans        &trans     &trans      &trans      &trans
+   &trans  &kp LG(NUMBER_1)  &kp LS(I)  &trans  &trans  &macro_screenshot    &trans    &trans        &trans     &trans      &trans      &trans
             >;
         };
 
