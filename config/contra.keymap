@@ -183,6 +183,26 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
+        morph_rshift_lpar_fn: morph_rshift_lpar_fn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_RSHIFT_LPAR_FN";
+            bindings =
+                <&mo 1>,
+                <&kp LEFT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+        morph_rshift_rpar_fn: morph_rshift_rpar_fn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_RSHIFT_RPAR_FN";
+            bindings =
+                <&kp LEFT_ALT>,
+                <&kp RPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -344,19 +364,19 @@
 
         default_layer {
             bindings = <
-&mmmorph_esc_excl     &kp Q     &kp W  &kp E                    &kp R          &kp T          &kp Y          &kp U                      &kp I                      &kp O                    &kp P  &morph_bksp_delete
-    &mt LCTRL TAB     &kp A     &kp S  &kp D                    &kp F  &morph_g_home  &morph_h_left  &morph_j_down                &morph_k_up             &morph_l_right          &morph_semi_end            &kp APOS
-   &kp LEFT_SHIFT     &kp Z     &kp X  &kp C                    &kp V          &kp B          &kp N          &kp M                  &kp COMMA                    &kp DOT                 &kp FSLH     &kp RIGHT_SHIFT
-            &mo 1  &kp LALT  &kp LGUI  &to 7  &morph_space_underscore      &kp SPACE      &kp SPACE    &lt 4 ENTER  &morph_lbracket_tmux_prev  &morph_rbracket_tmux_next  &morph_underscore_slash  &morph_lctrl_enter
+    &mmmorph_esc_excl                  &kp Q     &kp W  &kp E                    &kp R          &kp T          &kp Y          &kp U                      &kp I                      &kp O                    &kp P  &morph_bksp_delete
+        &mt LCTRL TAB                  &kp A     &kp S  &kp D                    &kp F  &morph_g_home  &morph_h_left  &morph_j_down                &morph_k_up             &morph_l_right          &morph_semi_end            &kp APOS
+       &kp LEFT_SHIFT                  &kp Z     &kp X  &kp C                    &kp V          &kp B          &kp N          &kp M                  &kp COMMA                    &kp DOT                 &kp FSLH     &kp RIGHT_SHIFT
+&morph_rshift_lpar_fn  &morph_rshift_rpar_fn  &kp LGUI  &to 7  &morph_space_underscore      &kp SPACE      &kp SPACE    &lt 4 ENTER  &morph_lbracket_tmux_prev  &morph_rbracket_tmux_next  &morph_underscore_slash  &morph_lctrl_enter
             >;
         };
 
         F_MODS {
             bindings = <
-&kp TILDE            &trans  &kp LC(W)  &trans  &trans             &trans    &trans    &trans        &trans     &trans      &trans  &kp DELETE
-   &trans         &kp PG_UP     &trans  &trans  &trans             &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &tmux_prev  &tmux_next
-   &trans         &kp PG_DN     &trans  &trans  &trans          &kp LC(B)    &trans    &trans        &trans     &trans      &trans      &trans
-   &trans  &kp LG(NUMBER_1)  &kp LS(I)  &trans  &trans  &macro_screenshot    &trans    &trans        &trans     &trans      &trans      &trans
+&kp TILDE            &trans  &kp LC(W)  &trans  &trans             &trans    &trans    &trans        &trans      &trans      &trans  &kp DELETE
+   &trans         &kp PG_UP     &trans  &trans  &trans             &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW   &kp RIGHT  &tmux_prev  &tmux_next
+   &trans         &kp PG_DN     &trans  &trans  &trans          &kp LC(B)    &trans    &trans        &trans      &trans      &trans      &trans
+   &trans  &kp LG(NUMBER_1)  &kp LS(I)  &trans  &trans  &macro_screenshot    &trans    &trans    &tmux_prev  &tmux_next      &trans   &kp LC(L)
             >;
         };
 
