@@ -193,6 +193,7 @@
         combo_underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <35 34>;
+            timeout-ms = <75>;
         };
 
         combo_tab {
