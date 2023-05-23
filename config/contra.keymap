@@ -319,10 +319,10 @@
 
         F_MODS {
             bindings = <
-&kp TILDE            &trans  &kp LC(W)  &trans   &trans             &trans    &trans    &trans        &trans      &trans      &trans  &kp DELETE
-   &trans         &kp PG_UP     &trans  &trans   &trans           &kp HOME  &kp LEFT  &kp DOWN  &kp UP_ARROW   &kp RIGHT  &tmux_prev  &tmux_next
-   &trans         &kp PG_DN     &trans  &trans   &trans          &kp LC(B)    &trans    &trans        &trans      &trans      &trans      &trans
-   &trans  &kp LG(NUMBER_1)  &kp LS(I)  &trans  &kp END  &macro_screenshot    &trans    &trans    &tmux_prev  &tmux_next      &trans   &kp LC(L)
+&kp TILDE            &trans  &kp LC(W)  &trans   &trans             &trans    &trans    &trans        &trans      &trans  &kp LG(NUMBER_0)  &kp DELETE
+&kp PG_UP            &trans     &trans  &trans   &trans           &kp HOME  &kp LEFT  &kp DOWN  &kp UP_ARROW   &kp RIGHT        &tmux_prev  &tmux_next
+&kp PG_DN            &trans     &trans  &trans   &trans          &kp LC(B)    &trans    &trans        &trans      &trans            &trans      &trans
+   &trans  &kp LG(NUMBER_1)  &kp LS(I)  &trans  &kp END  &macro_screenshot    &trans    &trans    &tmux_prev  &tmux_next            &trans   &kp LC(L)
             >;
         };
 
@@ -346,10 +346,10 @@
 
         NUM_MODS_ALT {
             bindings = <
-&kp EXCLAMATION           &kp N1  &kp N2    &kp N3      &kp N4       &kp N5     &kp N6         &kp N7         &kp N8                &kp N9                 &kp N0    &kp BACKSPACE
- &kp LEFT_BRACE  &kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPERSAND       &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE
-      &kp PG_UP           &trans  &trans    &trans      &trans       &trans     &trans         &trans      &kp COMMA               &kp DOT              &kp SLASH        &kp RSHFT
-  &kp PAGE_DOWN           &trans  &trans  &kp PLUS      &trans       &trans     &trans         &trans  &kp LESS_THAN      &kp GREATER_THAN                 &trans           &trans
+&kp EXCLAMATION           &kp N1     &kp N2    &kp N3      &kp N4       &kp N5     &kp N6         &kp N7         &kp N8                &kp N9                 &kp N0    &kp BACKSPACE
+ &kp LEFT_BRACE  &kp EXCLAMATION     &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPERSAND       &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE
+         &trans           &trans     &trans    &trans      &trans       &trans     &trans         &trans      &kp COMMA               &kp DOT              &kp SLASH        &kp RSHFT
+         &trans           &trans  &kp MINUS  &kp PLUS      &trans       &trans     &trans         &trans  &kp LESS_THAN      &kp GREATER_THAN                 &trans           &trans
             >;
         };
 
